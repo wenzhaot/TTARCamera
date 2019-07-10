@@ -22,7 +22,7 @@ pod 'TTARCamera'
 
 ## Author
 
-wenzhaot, tanwenzhao@vipkid.com.cn
+- [wenzhaot](https://github.com/wenzhaot) ([@Wenzhaot](https://twitter.com/Wenzhaot))
 
 ## License
 

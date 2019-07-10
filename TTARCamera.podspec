@@ -24,9 +24,9 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/wenzhaot/TTARCamera'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'wenzhaot' => 'tanwenzhao@vipkid.com.cn' }
+  s.author           = { 'wenzhaot' => 'tanwenzhao1025@gmail.com' }
   s.source           = { :git => 'https://github.com/wenzhaot/TTARCamera.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/Wenzhaot'
 
   s.ios.deployment_target = '12.0'
   
