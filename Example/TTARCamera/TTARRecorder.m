@@ -93,6 +93,7 @@
     if (self) {
         _pixelsQueue = dispatch_queue_create("VKARRecorder.pixelsQueue", DISPATCH_QUEUE_CONCURRENT);
         _writerQueue = dispatch_queue_create("VKARRecorder.writerQueue", NULL);
+        _orientation = UIInterfaceOrientationPortrait;
     }
     return self;
 }
@@ -137,7 +138,7 @@
     _renderEngine.scene = self.camera.sceneView.scene;
     
     _gpuLoop = [CADisplayLink displayLinkWithTarget:[TTARWeakProxy weakProxyForObject:self] selector:@selector(renderFrame)];
-    _gpuLoop.preferredFramesPerSecond = 60;
+    _gpuLoop.preferredFramesPerSecond = 30;
     [_gpuLoop addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     
 }
@@ -293,8 +294,7 @@
 
 - (void)setBeautyLevel:(CGFloat)beautyLevel {
     _beautyLevel = beautyLevel;
-    
-    _camera.backgroundRender.hasBeauty = beautyLevel >= 0.6;
+    _camera.backgroundRender.beautyLevel = beautyLevel;
 }
 
 // MARK: - Getter
@@ -303,7 +303,7 @@
     if (!_camera) {
         _camera = [[TTARCamera alloc] init];
         _camera.outputImageOrientation = _orientation;
-        _camera.backgroundRender.hasBeauty = _beautyLevel >= 0.6;
+        _camera.backgroundRender.beautyLevel = _beautyLevel;
         
         __weak typeof(self)weakSelf = self;
         [_camera setAudioBufferHandler:^(CMSampleBufferRef  _Nonnull audioSampleBuffer) {

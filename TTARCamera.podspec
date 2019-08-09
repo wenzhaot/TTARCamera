@@ -46,5 +46,7 @@ TODO: Add long description of the pod here.
   s.public_header_files = 'TTARCamera/Classes/*.h'
   s.source_files = 'TTARCamera/Classes/*'
   
+  s.pod_target_xcconfig = { 'MTL_COMPILER_FLAGS' => '-fcikernel', 'MTLLINKER_FLAGS' => '-cikernel' }
+  
   s.dependency 'YYModel'
 end

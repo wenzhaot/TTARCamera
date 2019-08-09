@@ -41,8 +41,8 @@
     CVPixelBufferRef videoPixelBuffer = frame.capturedImage;
     if (self.frameFeeder == nil) {
         CIImage *originalImage = [CIImage imageWithCVPixelBuffer:videoPixelBuffer];
-        if (self.hasBeauty) {
-            originalImage = [originalImage imageByApplyingFilter:@"TTCIHighPassSkinSmoothing" withInputParameters:@{@"inputAmount" : @(0.7)}];
+        if (self.beautyLevel) {
+            originalImage = [originalImage imageByApplyingFilter:@"TTCIHighPassSkinSmoothing" withInputParameters:@{@"inputAmount" : @(self.beautyLevel)}];
         }
         
         
@@ -109,8 +109,8 @@
     
     CIImage *output = [image imageByApplyingFilter:@"CIBlendWithMask" withInputParameters:parameters];
     
-    if (self.hasBeauty) {
-        output = [output imageByApplyingFilter:@"TTCIHighPassSkinSmoothing" withInputParameters:@{@"inputAmount" : @(0.7)}];
+    if (self.beautyLevel) {
+        output = [output imageByApplyingFilter:@"TTCIHighPassSkinSmoothing" withInputParameters:@{@"inputAmount" : @(self.beautyLevel)}];
     }
     
     CIContext *context = [CIContext context];

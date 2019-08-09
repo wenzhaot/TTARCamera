@@ -35,7 +35,7 @@
     
     _configuration = [[ARFaceTrackingConfiguration alloc] init];
     for (ARVideoFormat *vf in ARFaceTrackingConfiguration.supportedVideoFormats) {
-        if (CGSizeEqualToSize(vf.imageResolution, CGSizeMake(1280, 720)) && vf.framesPerSecond == 60) {
+        if (CGSizeEqualToSize(vf.imageResolution, CGSizeMake(1280, 720)) && vf.framesPerSecond == 30) {
             _configuration.videoFormat = vf;
             break;
         }

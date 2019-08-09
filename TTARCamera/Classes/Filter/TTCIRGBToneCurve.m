@@ -43,7 +43,7 @@ static CIKernel *tt_rgbToneCurveKernel = nil;
     self = [super init];
     if (self) {
         _cache = [[NSCache alloc] init];
-        _cache.name = @"VKCIRGBToneCurveSplineCurveCache";
+        _cache.name = @"TTCIRGBToneCurveSplineCurveCache";
         _cache.totalCostLimit = 40;
         
         if (tt_rgbToneCurveKernel == nil) {
@@ -51,9 +51,9 @@ static CIKernel *tt_rgbToneCurveKernel = nil;
             NSURL *kernelURL = [bundle URLForResource:@"default" withExtension:@"metallib"];
             NSError *error;
             NSData *data = [NSData dataWithContentsOfURL:kernelURL];
-            tt_rgbToneCurveKernel = [CIColorKernel kernelWithFunctionName:@"rgbToneCurve" fromMetalLibraryData:data error:&error];
+            tt_rgbToneCurveKernel = [CIKernel kernelWithFunctionName:@"rgbToneCurve" fromMetalLibraryData:data error:&error];
             if (error) {
-                NSLog(@"highPass kernel error:%@", error.localizedDescription);
+                NSLog(@"rgbToneCurve kernel error:%@", error.localizedDescription);
             }
         }
     }

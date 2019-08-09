@@ -29,7 +29,7 @@ static CIColorKernel *tt_greenBlueChannelOverlayBlendKernel = nil;
             NSData *data = [NSData dataWithContentsOfURL:kernelURL];
             tt_greenBlueChannelOverlayBlendKernel = [CIColorKernel kernelWithFunctionName:@"greenBlueChannelOverlayBlend" fromMetalLibraryData:data error:&error];
             if (error) {
-                NSLog(@"highPass kernel error:%@", error.localizedDescription);
+                NSLog(@"greenBlueChannelOverlayBlend kernel error:%@", error.localizedDescription);
             }
         }
     }
@@ -62,7 +62,7 @@ static CIColorKernel *tt_highPassSkinSmoothingMaskBoostKernel = nil;
             NSData *data = [NSData dataWithContentsOfURL:kernelURL];
             tt_highPassSkinSmoothingMaskBoostKernel = [CIColorKernel kernelWithFunctionName:@"highPassSkinSmoothingMaskBoost" fromMetalLibraryData:data error:&error];
             if (error) {
-                NSLog(@"highPass kernel error:%@", error.localizedDescription);
+                NSLog(@"highPassSkinSmoothingMaskBoost kernel error:%@", error.localizedDescription);
             }
             
         }
@@ -112,6 +112,7 @@ static CIColorKernel *tt_highPassSkinSmoothingMaskBoostKernel = nil;
 @end
 
 @implementation TTCIHighPassSkinSmoothing
+@synthesize inputAmount = _inputAmount;
 
 + (void)load {
     static dispatch_once_t onceToken;

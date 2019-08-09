@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45B8BF7B22FC45E600742F20 /* ocean.zip in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7022FC45E600742F20 /* ocean.zip */; };
+		45B8BF7C22FC45E600742F20 /* ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7122FC45E600742F20 /* ocean.png */; };
+		45B8BF7D22FC45E600742F20 /* chewbacca.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7322FC45E600742F20 /* chewbacca.png */; };
+		45B8BF7E22FC45E600742F20 /* chewbacca.zip in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7422FC45E600742F20 /* chewbacca.zip */; };
+		45B8BF7F22FC45E600742F20 /* glasses.zip in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7622FC45E600742F20 /* glasses.zip */; };
+		45B8BF8022FC45E600742F20 /* glasses.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7722FC45E600742F20 /* glasses.png */; };
+		45B8BF8122FC45E600742F20 /* lolipopRabbit.zip in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7922FC45E600742F20 /* lolipopRabbit.zip */; };
+		45B8BF8222FC45E600742F20 /* lolipopRabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7A22FC45E600742F20 /* lolipopRabbit.png */; };
+		45B8BF8322FC45FD00742F20 /* ocean.zip in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7022FC45E600742F20 /* ocean.zip */; };
+		45B8BF8422FC45FD00742F20 /* ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7122FC45E600742F20 /* ocean.png */; };
+		45B8BF8522FC45FD00742F20 /* chewbacca.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7322FC45E600742F20 /* chewbacca.png */; };
+		45B8BF8622FC45FD00742F20 /* chewbacca.zip in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7422FC45E600742F20 /* chewbacca.zip */; };
+		45B8BF8722FC45FD00742F20 /* glasses.zip in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7622FC45E600742F20 /* glasses.zip */; };
+		45B8BF8822FC45FD00742F20 /* glasses.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7722FC45E600742F20 /* glasses.png */; };
+		45B8BF8922FC45FD00742F20 /* lolipopRabbit.zip in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7922FC45E600742F20 /* lolipopRabbit.zip */; };
+		45B8BF8A22FC45FD00742F20 /* lolipopRabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B8BF7A22FC45E600742F20 /* lolipopRabbit.png */; };
 		45D3A58522D5D9E60088D94E /* TTARRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D3A58422D5D9E60088D94E /* TTARRecorder.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -40,6 +56,14 @@
 /* Begin PBXFileReference section */
 		0A68450B962B22CF72C02A78 /* Pods_TTARCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTARCamera_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE35C53BEE596E7D652B883 /* Pods-TTARCamera_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTARCamera_Example.release.xcconfig"; path = "Target Support Files/Pods-TTARCamera_Example/Pods-TTARCamera_Example.release.xcconfig"; sourceTree = "<group>"; };
+		45B8BF7022FC45E600742F20 /* ocean.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ocean.zip; sourceTree = "<group>"; };
+		45B8BF7122FC45E600742F20 /* ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ocean.png; sourceTree = "<group>"; };
+		45B8BF7322FC45E600742F20 /* chewbacca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chewbacca.png; sourceTree = "<group>"; };
+		45B8BF7422FC45E600742F20 /* chewbacca.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = chewbacca.zip; sourceTree = "<group>"; };
+		45B8BF7622FC45E600742F20 /* glasses.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = glasses.zip; sourceTree = "<group>"; };
+		45B8BF7722FC45E600742F20 /* glasses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glasses.png; sourceTree = "<group>"; };
+		45B8BF7922FC45E600742F20 /* lolipopRabbit.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = lolipopRabbit.zip; sourceTree = "<group>"; };
+		45B8BF7A22FC45E600742F20 /* lolipopRabbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lolipopRabbit.png; sourceTree = "<group>"; };
 		45D3A58222D5D98D0088D94E /* TTRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTRecorder.h; sourceTree = "<group>"; };
 		45D3A58322D5D9E60088D94E /* TTARRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTARRecorder.h; sourceTree = "<group>"; };
 		45D3A58422D5D9E60088D94E /* TTARRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTARRecorder.m; sourceTree = "<group>"; };
@@ -99,6 +123,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45B8BF6E22FC45E600742F20 /* Stickers */ = {
+			isa = PBXGroup;
+			children = (
+				45B8BF6F22FC45E600742F20 /* ocean */,
+				45B8BF7222FC45E600742F20 /* chewbacca */,
+				45B8BF7522FC45E600742F20 /* glasses */,
+				45B8BF7822FC45E600742F20 /* lolipopRabbit */,
+			);
+			path = Stickers;
+			sourceTree = "<group>";
+		};
+		45B8BF6F22FC45E600742F20 /* ocean */ = {
+			isa = PBXGroup;
+			children = (
+				45B8BF7022FC45E600742F20 /* ocean.zip */,
+				45B8BF7122FC45E600742F20 /* ocean.png */,
+			);
+			path = ocean;
+			sourceTree = "<group>";
+		};
+		45B8BF7222FC45E600742F20 /* chewbacca */ = {
+			isa = PBXGroup;
+			children = (
+				45B8BF7322FC45E600742F20 /* chewbacca.png */,
+				45B8BF7422FC45E600742F20 /* chewbacca.zip */,
+			);
+			path = chewbacca;
+			sourceTree = "<group>";
+		};
+		45B8BF7522FC45E600742F20 /* glasses */ = {
+			isa = PBXGroup;
+			children = (
+				45B8BF7622FC45E600742F20 /* glasses.zip */,
+				45B8BF7722FC45E600742F20 /* glasses.png */,
+			);
+			path = glasses;
+			sourceTree = "<group>";
+		};
+		45B8BF7822FC45E600742F20 /* lolipopRabbit */ = {
+			isa = PBXGroup;
+			children = (
+				45B8BF7922FC45E600742F20 /* lolipopRabbit.zip */,
+				45B8BF7A22FC45E600742F20 /* lolipopRabbit.png */,
+			);
+			path = lolipopRabbit;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +218,7 @@
 				45D3A58222D5D98D0088D94E /* TTRecorder.h */,
 				45D3A58322D5D9E60088D94E /* TTARRecorder.h */,
 				45D3A58422D5D9E60088D94E /* TTARRecorder.m */,
+				45B8BF6E22FC45E600742F20 /* Stickers */,
 			);
 			name = "Example for TTARCamera";
 			path = TTARCamera;
@@ -287,10 +359,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B8BF8022FC45E600742F20 /* glasses.png in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				45B8BF8222FC45E600742F20 /* lolipopRabbit.png in Resources */,
+				45B8BF7F22FC45E600742F20 /* glasses.zip in Resources */,
+				45B8BF8122FC45E600742F20 /* lolipopRabbit.zip in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				45B8BF7C22FC45E600742F20 /* ocean.png in Resources */,
+				45B8BF7B22FC45E600742F20 /* ocean.zip in Resources */,
+				45B8BF7D22FC45E600742F20 /* chewbacca.png in Resources */,
+				45B8BF7E22FC45E600742F20 /* chewbacca.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +378,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B8BF8322FC45FD00742F20 /* ocean.zip in Resources */,
+				45B8BF8422FC45FD00742F20 /* ocean.png in Resources */,
+				45B8BF8522FC45FD00742F20 /* chewbacca.png in Resources */,
+				45B8BF8622FC45FD00742F20 /* chewbacca.zip in Resources */,
+				45B8BF8722FC45FD00742F20 /* glasses.zip in Resources */,
+				45B8BF8822FC45FD00742F20 /* glasses.png in Resources */,
+				45B8BF8922FC45FD00742F20 /* lolipopRabbit.zip in Resources */,
+				45B8BF8A22FC45FD00742F20 /* lolipopRabbit.png in Resources */,
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

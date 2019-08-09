@@ -17,8 +17,23 @@ isPhoneXSeries = [[UIApplication sharedApplication] delegate].window.safeAreaIns
 (isPhoneXSeries);})
 
 
-@interface TTARViewController ()
+@interface TTARStickerCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@end
+
+@implementation TTARStickerCell
+
+@end
+
+
+
+
+
+@interface TTARViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (strong, nonatomic) TTARRecorder *arRecorder;
+@property (strong, nonatomic) NSArray *stickerNames;
+@property (assign, nonatomic) NSUInteger lastStickerItem;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation TTARViewController
@@ -26,7 +41,9 @@ isPhoneXSeries = [[UIApplication sharedApplication] delegate].window.safeAreaIns
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self.view setBackgroundColor:[UIColor blackColor]];
+    
+    self.stickerNames = @[@"ocean", @"chewbacca", @"glasses", @"lolipopRabbit"];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -57,7 +74,38 @@ isPhoneXSeries = [[UIApplication sharedApplication] delegate].window.safeAreaIns
                 NSLog(@"AR camera running error: %@", error.localizedDescription);
             }
         }];
+        
     }
+}
+
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    TTARStickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.imageView.image = [UIImage imageNamed:self.stickerNames[indexPath.item]];
+    return cell;
+}
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.stickerNames.count;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *zipPath = [[NSBundle mainBundle] pathForResource:self.stickerNames[indexPath.item] ofType:@"zip"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *path = NSTemporaryDirectory();
+    NSString *savePath = [path stringByAppendingString:[zipPath lastPathComponent]];
+    if (![fileManager fileExistsAtPath:savePath]) {
+        [fileManager copyItemAtPath:zipPath toPath:savePath error:NULL];
+    }
+    
+    [self.arRecorder removeStickerPackage:@(self.lastStickerItem).stringValue];
+    [self.arRecorder addStickerPackage:@(indexPath.item).stringValue zipPath:savePath];
+    
+    self.lastStickerItem = indexPath.item;
 }
 
 @end
