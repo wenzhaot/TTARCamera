@@ -183,7 +183,7 @@
         break;
         
         case UIInterfaceOrientationPortrait:
-        CGContextRotateCTM(context, M_PI_2);
+//        CGContextRotateCTM(context, M_PI_2);
         break;;
         
         case UIInterfaceOrientationPortraitUpsideDown:
